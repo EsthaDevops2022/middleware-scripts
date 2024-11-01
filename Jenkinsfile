@@ -30,7 +30,7 @@ pipeline {
         }
         stage('create a zip folder'){
             steps{
-                sh 'zip -r middleware.zip MIDDLEWARE-SCRIPTS'
+                sh 'zip -r middleware.zip . -i MIDDLEWARE-SCRIPTS'
             }
         }
         //stage('upload to JFrog'){
